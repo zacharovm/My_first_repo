@@ -1,17 +1,21 @@
 #1
 test_digit = str(input())
-a = test_digit[1:4]
-b = a[::-1]
-c = test_digit[0] + b + test_digit[-1]
-print(c)
+if len(test_digit) != 5:
+    print('Введите 5-значное число!')
+else:
+    a = test_digit[1:4]
+    b = a[::-1]
+    c = test_digit[0] + b + test_digit[-1]
+    print(c)
 
 
 #2
+print('Введите число дней до отпуска:')
 days = int(input())
 full_weeks = days // 7
 residue_week = days % 7
 if days == 5:
-    target_weekends = 2
+    target_weekends = 0
 elif days == 6:
     target_weekends = 1
 else:
